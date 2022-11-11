@@ -2,8 +2,11 @@
 
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
-<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
+<div id="root2"></div>
+<div id="root3"></div>
+
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 <script type="text/babel">
     class Timer extends React.Component {
         constructor(props) {
@@ -28,8 +31,10 @@
 
     }
 
-    const rootNode = document.getElementById('root');
-    const root = ReactDOM.createRoot(rootNode);
-    root.render(<Timer/>);
+    const rootNode = document.getElementById('root2');
+    const root2 = ReactDOM.createRoot(rootNode);
+    root2.render(<Timer/>);
 
 </script>
+
+<script src="button.js"></script>
