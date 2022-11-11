@@ -1,1 +1,35 @@
 <div id="root"></div>
+
+<script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+<script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+<script type="text/babel">
+    class Timer extends React.Component {
+        constructor(props) {
+            super(props)
+            this.state = {time:0};
+            this.tick = this.tick.bind(this);
+            setInterval(this.tick, 1000);
+        }
+
+        tick() {
+            return this.setState({time:this.state.time + 1});
+        }
+
+        render(){
+            return (
+                <div>
+                    <h1>Seconds since page is loaded:</h1>
+                    <h2>{this.state.time}</h2>
+                </div>
+            );
+        }
+
+    }
+
+    const rootNode = document.getElementById('root');
+    const root = ReactDOM.createRoot(rootNode);
+    root.render(<Timer/>);
+
+</script>

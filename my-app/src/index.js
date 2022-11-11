@@ -1,6 +1,5 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
 // example 1
@@ -10,12 +9,11 @@ var sampleJSX =
     <h1>hello world!</h1>
 </div>
 
-
 root.render(sampleJSX);
 
 // example 2
 
-class Addition extends React.Component {
+class Example extends React.Component {
     render () {
         return (
             <div>
@@ -25,7 +23,8 @@ class Addition extends React.Component {
     }
 }
 
-root.render(<Addition/>);
+root.render(<Example/>);
+
 
 // example 3
 
@@ -58,6 +57,7 @@ class Props extends React.Component {
 }
 
 root.render(<Props sampleProp="two plus two is" sampleProp2={2+2}/>);
+
 
 // example 5
 
@@ -92,6 +92,7 @@ class List extends React.Component {
 }
 
 root.render(<List/>);
+
 
 // example 7
 
@@ -143,7 +144,7 @@ class Button extends React.Component {
             );
 
         return (
-            <div></div>
+            <div>haha</div>
         )
     }
 }
